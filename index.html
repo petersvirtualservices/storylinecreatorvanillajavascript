@@ -1,0 +1,63 @@
+<!Doctype html>
+<html lang='en'>
+
+<head>
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Orbitron&display=swap" rel="stylesheet">
+    <meta name="description" content="This is an app designed to create a predictibility model for actions in videos.">
+    <title>Movement Connection Analyzer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Movement Analyzer</h1>
+    <div id="links">
+        | <a href="./index.html">Home</a> |
+        <a href="./directionsandefinitions.html">Directions and Definitions</a> |
+        <a href="./contact.html">Contact Charlene</a> |
+        <a href="./stats.html">Check Latest Statistics</a> |
+        <a href="./entries.html">Check Latest Statistics</a> |
+    </div>
+    </br></br>
+
+    <table>
+
+        <tr>
+            <td>
+                <p>
+                    MAKE SURE A CONNECTION IS COMPLETED WITHIN THE SAME SITTING.
+                    <br/>
+                    <input id="videoURL" name="videoURL" placeholder="Video URL Goes Here"/>
+                </p>
+
+                <div class="hide" id="connectionID"></div>
+                <div class="hide" id="currentTimeHereNow"></div>
+                <div id="videoPlayer"></div>
+                <br/>
+                <div>
+                    <button class="videoButtons" id="newVideo">Start</button>
+                    <button class="videoButtons" id="newAnalysis">New Analysis</button>
+                    <!--The New Connection button is for when you don't have anyone more involved in the current group being analyzed.-->
+                    <button class="videoButtons" id="newConnection">New Connection</button>
+                    <button class="videoButtons" id="nextVideo">Next Video</button>
+                    <button class="videoButtons" id="uploadFile">Upload File 1</button>
+                    <a href="/write/writeFile"><button class="videoButtons" id="createFile">Upload File 2</button></a>
+
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <div id="actions"></div>
+            </td>
+        </tr>
+
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/script.js" defer></script>
+
+</body>
+
+</html>
