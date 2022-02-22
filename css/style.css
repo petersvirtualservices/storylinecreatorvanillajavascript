@@ -71,6 +71,6 @@ p {
     font-size:1px;
 }
 
-input {
+#jsonRead {
     display: none;
 }
