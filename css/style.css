@@ -45,8 +45,8 @@ video {
 
 .videoButtons {
     background-color: lightblue;
-    position:relative;
     margin:0 auto;
+
 }
 
 #links {
@@ -71,8 +71,6 @@ p {
     font-size:1px;
 }
 
-form {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
+input {
+    display: none;
 }

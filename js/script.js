@@ -13,6 +13,7 @@ var start = document.getElementById('newVideo');
 var myVar, counter; 
 var username = "CharleneP";
 var actionJSON = [];
+var emailTheFollowing = document.getElementById('emailTheFollowing');
 buttons();
 
 //start.addEventListener("click", function (e) {
@@ -133,7 +134,14 @@ uploadButton.addEventListener("click", function (e) {
 
 getEntries.addEventListener("click", function (e) {
   e.preventDefault();  
-  jsonRead.innerHTML = localStorage.getItem("actionJSON");
+  jsonRead.value = localStorage.getItem("actionJSON"); 
+  //navigator.clipboard.writeText(JSON.parse(actionJSON));
+  //console.log('Copied actionJson');
 });
 
-//module.exports = buttons;
+emailTheFollowing.addEventListener("click", function (e) {
+  e.preventDefault();  
+  navigator.clipboard.writeText(jsonRead.value);
+  //navigator.clipboard.writeText(JSON.parse(actionJSON));
+  //console.log('Copied actionJson');
+});
