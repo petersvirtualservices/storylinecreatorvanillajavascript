@@ -7,7 +7,7 @@
     const chromeLauncher = require('chrome-launcher');
     const chrome = await chromeLauncher.launch({ chromeFlags: ['--headless'] });
     const options = { logLevel: 'info', output: 'html', port: chrome.port };
-    const runnerResult = await lighthouse('https://petersvirtualservices.github.io/storylinecreator/public', options);
+    const runnerResult = await lighthouse('https://petersvirtualservices.github.io/storylinecreatorvanillajavascript/', options);
 
     // `.report` is the HTML report as a string
     const reportHtml = runnerResult.report;

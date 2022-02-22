@@ -117,13 +117,10 @@ uploadButton.addEventListener("click", function (e) {
 getEntries.addEventListener("click", function (e) {
   e.preventDefault();  
   jsonRead.value = localStorage.getItem("actionJSON"); 
-  //navigator.clipboard.writeText(JSON.parse(actionJSON));
-  //console.log('Copied actionJson');
 });
 
 emailTheFollowing.addEventListener("click", function (e) {
   e.preventDefault();  
   navigator.clipboard.writeText(jsonRead.value);
-  //navigator.clipboard.writeText(JSON.parse(actionJSON));
-  //console.log('Copied actionJson');
+
 });
