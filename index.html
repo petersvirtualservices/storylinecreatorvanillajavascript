@@ -24,23 +24,29 @@
 
         <tr>
             <td>
+                <h2>Send In Your Results</h2>
+    <button class="EmailButtons" id="uploadFile">Organize Data</button>
+    <button class="EmailButtons" id="getEntries">View Entries</button>
+    <button class="EmailButtons" id="emailTheFollowing">Copy to ClipBoard</button>
+    <p><a href="mailto:info@petersinnovations.com">info@petersinnovations.com</a></p>
+    <hr />
                 <p>
-                    MAKE SURE A CONNECTION IS COMPLETED WITHIN THE SAME SITTING.
-                    <br/>
-                    <input id="videoURL" name="videoURL" placeholder="Video URL Goes Here"/>
+                    MAKE SURE A CONNECTION IS COMPLETED WITHIN THE SAME SITTING.</p>
+                    <hr />
+                    <p><input id="videoURL" name="videoURL" placeholder="Video URL Goes Here"/>
                 </p>
-
+                <hr />
                 <div class="hide" id="connectionID"></div>
                 <div class="hide" id="currentTimeHereNow"></div>
                 <div id="videoPlayer"></div>
                 <br/>
                 <div>
                     <button class="videoButtons" id="newVideo">Start</button>
+                    <!--The New Analysis button is for when you need to analyze a new person within the same connection.-->
                     <button class="videoButtons" id="newAnalysis">New Analysis</button>
                     <!--The New Connection button is for when you don't have anyone more involved in the current group being analyzed.-->
                     <button class="videoButtons" id="newConnection">New Connection</button>
-                    <button class="videoButtons" id="nextVideo">Next Video</button>
-                    
+                  
                 </div>
             </td>
         </tr>
@@ -52,11 +58,7 @@
 
     </table>
 
-    <h2>Email Your Results</h2>
-    <button class="videoButtons" id="uploadFile">Organize Data</button>
-    <button class="videoButtons" id="getEntries">View Entries</button>
-    <button class="videoButtons" id="emailTheFollowing">Copy to ClipBoard</button>
-    <a href="mailto:info@petersinnovations.com">Send Link Here</a>
+    
 
         <input type="text" id="jsonRead" />  
         

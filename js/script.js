@@ -93,24 +93,6 @@ newAnalysis.addEventListener("click", function (e) {
   actionJSON.push(actionAdd);
 })
 
-
-nextVideo.addEventListener("click", function (e) {
-  e.preventDefault();
-  var actionAdd = {
-    action: "New Video",
-    date: Date(),
-    currentTime: '0',
-    videoID: videoURL.value,
-    connectionID: connectionIDPlace.innerText,
-    username: username
-  }
-  clearInterval(myVar);
-  counter = 0;
-  myVar = setInterval(restartTimer, 1000);
-
-  actionJSON.push(actionAdd);
-})
-
 newConnection.addEventListener("click", function (e) {
   e.preventDefault();
   var connectionIDCreation = Math.floor(Math.random() * 100000000);
