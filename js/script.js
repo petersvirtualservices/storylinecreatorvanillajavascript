@@ -10,7 +10,7 @@ var jsonRead = document.getElementById("jsonRead");
 var videoURL = document.getElementById("videoURL");
 //var submit = document.getElementById("submit");
 var start = document.getElementById('newVideo');
-var myVar, counter; 
+var myVar, counter;
 var username = "CharleneP";
 var actionJSON = [];
 var emailTheFollowing = document.getElementById('emailTheFollowing');
@@ -25,29 +25,29 @@ start.addEventListener("click", function (e) {
   e.preventDefault();
   //var videoTest = JSON.parse(this.responseText);
   console.log(videoURL.value);
-      var video = videoURL.value;
-      var vidPlayer = document.getElementById("videoPlayer");
-      //var vidURL = document.getElementById("videoURL");
-      //vidURL.innerText = video;
-//**Video Player */
+  var video = videoURL.value;
+  var vidPlayer = document.getElementById("videoPlayer");
+  //var vidURL = document.getElementById("videoURL");
+  //vidURL.innerText = video;
+  //**Video Player */
 
-      //Youtube Videos  
-        var output = '';
-      output += `<iframe id="videoChange" width="560" height="315" src="` + video + `" title="YouTube 
+  //Youtube Videos  
+  var output = '';
+  output += `<iframe id="videoChange" width="560" height="315" src=${video} title="YouTube 
       video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
       gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 
-       //Output for videos not on Youtube and Vimeo
-      /*
-            output += `<video id="videoChange" width="500" height="400" controls>
-            <source src="` + videoTest[0].url + `" type="video/` + videoTest[0].media + `" />
-          Your browser does not support the video tag.
-          </video>`;
-      */
+  //Output for videos not on Youtube and Vimeo
+  /*
+        output += `<video id="videoChange" width="500" height="400" controls>
+        <source src="` + videoTest[0].url + `" type="video/` + videoTest[0].media + `" />
+      Your browser does not support the video tag.
+      </video>`;
+  */
 
-      vidPlayer.innerHTML = output;
+  vidPlayer.innerHTML = output;
 
-      return video;
+  return video;
 })
 
 function buttons() {
@@ -82,21 +82,21 @@ newAnalysis.addEventListener("click", function (e) {
     action: "New Analysis",
     date: Date(),
     currentTime: '0',
-    videoID: videoURL.value,
+    videoID: '"' + videoURL.value + '"',
     connectionID: connectionIDPlace.innerText,
     username: username
   }
   clearInterval(myVar);
   counter = 0;
   myVar = setInterval(restartTimer, 1000);
-  
+
   actionJSON.push(actionAdd);
 })
 
 newConnection.addEventListener("click", function (e) {
   e.preventDefault();
   var connectionIDCreation = Math.floor(Math.random() * 100000000);
-  connectionIDPlace.innerHTML = connectionIDCreation;  
+  connectionIDPlace.innerHTML = connectionIDCreation;
   clearInterval(myVar);
   counter = 0;
   myVar = setInterval(restartTimer, 1000);
@@ -106,7 +106,7 @@ newConnection.addEventListener("click", function (e) {
 function restartTimer() {
   counter++;
   var t = counter;
- currentTimePlace.innerHTML = t;
+  currentTimePlace.innerHTML = t;
 }
 
 uploadButton.addEventListener("click", function (e) {
@@ -115,12 +115,12 @@ uploadButton.addEventListener("click", function (e) {
 });
 
 getEntries.addEventListener("click", function (e) {
-  e.preventDefault();  
-  jsonRead.value = localStorage.getItem("actionJSON"); 
+  e.preventDefault();
+  jsonRead.value = localStorage.getItem("actionJSON");
 });
 
 emailTheFollowing.addEventListener("click", function (e) {
-  e.preventDefault();  
+  e.preventDefault();
   navigator.clipboard.writeText(jsonRead.value);
 
 });
